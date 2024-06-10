@@ -1,0 +1,21 @@
+<div class="main-block component">
+    <h2>Project Experience</h2>
+    <p>
+        I excelled in <span class="highlight">front-end development</span>, spearheading the creation of dynamic Single Page Applications (SPA) 
+        with <span class="highlight">Angular</span> and <span class="highlight">React JS</span>.Engaging closely with clients, I ensured tailored 
+        solutions aligned with their needs, garnering <span class="highlight">recognition as the Best Performer</span> for my significant 
+        contributions to project success. Additionally, I actively participated in agile methodologies, driving continuous improvement 
+        through sprint planning and technical discussions.
+    </p>
+    <br>
+    <div class="projects" *ngFor="let project of projects">
+        <h3 class="project-name">{{ project.name }}</h3>
+        <p class="project-description">{{ project.description }}</p>
+        <span class="responsibilities">Responsibilities</span>
+        <ul class="responsibility">
+            <li *ngFor="let responsibility of project.responsibilities">{{ responsibility }}</li>
+        </ul>
+        <span class="technologies">Technologies Used</span>
+        <p class="project-para">{{ project.technologies }}</p>
+    </div>
+</div>

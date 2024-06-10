@@ -1,1 +1,271 @@
-/* You can add global styles to this file, and also import other style files */
+    /* You can add global styles to this file, and also import other style files */
+
+    body {
+        margin: 0;
+        .main-container {
+            display: flex;
+            position: relative;
+            box-sizing: border-box;
+            background-color: #E1E2F6;
+            app-sidebar {
+                .main-container-left {
+                    display: flex;
+                    height: 100vh;
+                    .side-bar {
+                        width: 350px;
+                        display: flex;
+                        align-items: end;
+                        flex-direction: column;
+                        position: relative;
+                        margin-top: 27%;
+                        button {
+                            width: 60%;
+                            text-align: start;
+                            height: 40px;
+                            background-color: #0009B9;
+                            color: #FFFFFF;
+                            border: none;
+                            border-radius: 10px;
+                            margin-bottom: 20px;
+                            padding: 10px 15px;
+                            font-weight: 700;
+                            font-size: 14px;
+                            font-family: sans-serif;
+                        }
+                    }
+                    app-footer {
+                        .font-icons {
+                            position: absolute;
+                            display: flex;
+                            flex-direction: column;
+                            bottom: 0;
+                            left: 50px;
+                            &::after {
+                                content: "";
+                                display: block;
+                                width: 1px;
+                                height: 90px;
+                                background-color: #0009B9;
+                                margin: 0 auto;
+                            }
+                            a {
+                                i {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .main-container-right {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                padding: 30px 40px 40px 40px;
+                overflow-x: hidden;
+                app-nav-bar {
+                    .title-bar {
+                        i {
+                            float: right;
+                            font-size: 30px;
+                            color: #B65B0B;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    button {
+        height: 35px;
+        background-color: #B65B0B;
+        border: none;
+        border-radius: 10px !important;
+        color: #FFFFFF;
+        font-size: 14px !important;
+        font-weight: 900;
+        padding: 8px 20px;
+    }
+    
+    .font-icons {
+        i {
+            font-size: 24px;
+        }
+        i.fa-linkedin-in {
+            color: #0A66C2;
+        }
+        i.fa-github {
+            color: #212529;
+        }
+        i.fa-envelope {
+            color: #CE493B;
+        }
+    }
+    
+    h2 {
+        font-size: 40px !important;
+        font-weight: 900 !important;
+        font-family: sans-serif;
+        margin-bottom: 19px !important;
+        color: #0A66C2 !important;
+    }
+    
+    h3 {
+        font-size: 25px !important;
+        font-weight: 900 !important;
+        font-family: sans-serif;
+        margin-bottom: 13px !important;
+        color: #B65B0B !important;
+    }
+    
+    span {
+        color: #000000;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    p {
+        font-size: 20px !important;
+        font-weight: 400 !important;
+        font-family: sans-serif;
+        margin: 0 !important;
+        padding: 0;
+    }
+    
+    li {
+        font-size: 20px;
+        font-weight: 400;
+        font-family: sans-serif;
+    }
+    
+    .highlight {
+        color: #0A66C2;
+        display: inline-block;
+        position: relative;
+        &::after {
+            bottom: 3px;
+            content: "";
+            display: block;
+            height: 1px;
+            left: 50%;
+            position: absolute;
+            background: #0A66C2;
+            transition: width 0.6s ease 0s, left 0.6s ease 0s;
+            width: 0%;
+        }
+        &:hover::after {
+            width: calc(100% - 4px); /* Spread the underline equally on both sides, subtracting the border thickness */
+            left: 2px; /* Offset by half of the border thickness */
+        }
+    }
+    
+    app-home-page, app-about-me, app-projects, app-certifications, app-contact {
+        .main-block {
+            background-color: #FFFFFF;
+            height: calc(100vh - 135px);
+            border-radius: 10px;
+            margin-top: 30px;
+            padding: 31px 40px 40px 40px;
+            position: relative;
+            overflow-y: auto;
+            display: flex;
+            .image {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    padding: 100px;
+                    border-radius: 140px;
+                }
+            }
+            .about-field {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                h1 {
+                    font-family: sans-serif;
+                    font-weight: 900;
+                    font-size: 40px;
+                    color: #0009B9;
+                }
+                h3 {
+                    font-family: sans-serif;
+                    font-weight: 900;
+                    color: #424242;
+                }
+                .font-icons {
+                    margin-top: 20px;
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+                button {
+                    margin-top: 10px;
+                    i.fa-download {
+                        font-size: 15px;
+                        margin-left: 7px;
+                    }
+                }
+            }
+        }
+    }
+    
+    app-home-page, app-about-me, app-projects, app-certifications, app-contact {
+        .main-block.component {
+            flex-direction: column;
+            h1,h2:first-child {
+                text-align: center;
+            }
+            .row {
+                display: flex;
+                align-items: center;
+                margin-bottom: 4px;
+            }
+        }
+    }
+    
+    app-about-me {
+        .main-block.component {
+            h3 {
+                margin-top: 22px;
+            }
+        }
+    }
+    
+    app-projects {
+        .main-block.component {
+            .projects {
+                margin-bottom: 30px;
+                h3.project-name {
+                    margin-bottom: 6px !important;
+                }
+                .project-description, .responsibilities, .technologies {
+                    padding-left: 20px;
+                    margin-bottom: 7px !important;
+                }
+                .responsibility {
+                    padding-left: 60px;
+                    margin-bottom: 13px;   
+                }
+                .project-para {
+                    padding-left: 40px;
+                }
+            }
+        }
+    }
+    
+    app-contact {
+        .main-block.component {
+            justify-content: center;
+            h1 {
+                margin-bottom: 20px;
+            }
+            p, .hello-button {
+                text-align: center;
+            }
+            .hello-button {
+                margin-top: 32px;
+            }
+        }
+    }

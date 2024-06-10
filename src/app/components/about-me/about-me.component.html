@@ -1,0 +1,25 @@
+
+<div class="main-block component col-12">
+    <h2>Introduction</h2>
+    <p>
+        I am a dedicated <span class="highlight">software developer</span> having <span class="highlight">2 years experience</span> with strong 
+        technical skills and a robust professional background. Proficient in <span class="highlight">Angular, React JS, HTML, CSS, Sass, and 
+        TypeScript</span>, I have practical experience using Visual Studio Code. Certified in React.JS, Java, HTML, CSS, and JavaScript 
+        from JSpiders, and recognized as a certified software programmer by Infosys, I bring a well-rounded expertise to my work. 
+        I have hands-on experience across all stages of the Software Development Life Cycle (SDLC), including 
+        requirement analysis, development, coding, testing, and code integration. My skills in using <span class="highlight">CSS media queries</span> 
+        ensure the creation of <span class="highlight">responsive web applications</span>, providing seamless user experiences across devices.
+    </p>
+    <br>
+    <p>
+        My capabilities include implementing system improvements, optimizing sites, standardizing patterns, 
+        and suggesting and executing ideas that add value to projects. Recognized for outstanding performance, 
+        Recognized for my contributions, I am committed to creating user-friendly, high-quality solutions that drive business growth.
+    </p>
+    <br>
+    <h3>Key Points</h3>
+    <div class="row col-md-12" *ngFor="let aboutMe of aboutMePage">
+        <span class="col-md-3">{{aboutMe.title}}</span>
+        <p class="col-md-8" [innerHTML]="highlightPhrase(aboutMe.description, 'Best Performer Award')">{{aboutMe.description}}</p>
+    </div>
+</div>

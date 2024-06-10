@@ -1,0 +1,6 @@
+<div class="main-container-left">
+    <div class="side-bar">
+        <button *ngFor="let button of buttons" (click)="button.action()">{{ button.title }}</button>
+    </div>
+    <app-footer></app-footer>
+</div>
