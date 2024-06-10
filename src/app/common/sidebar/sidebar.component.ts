@@ -33,7 +33,7 @@ export class SidebarComponent implements OnInit {
   }
 
   download_cv() {
-    window.open('../../../assets/cv/Avinash_CV.pdf', '_blank');
+    window.open('assets/cv/Avinash_CV.pdf', '_blank');
   }
 
 }
